@@ -105,7 +105,7 @@ def downloader(tryno):
     print('missed downloads: '+str(misseddownloads))
     print('Completed? '+str(0>=misseddownloads))
     print('try no: '+str(tryno))
-    if tryno <= 2 or misseddownloads > 0:
+    if ((tryno <= 2 or misseddownloads > 0) and tryno <=4):
         downloader(tryno)
     else:
         print('Do you want to redownload?')
